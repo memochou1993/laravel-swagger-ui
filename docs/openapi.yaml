@@ -1,0 +1,33 @@
+openapi: 3.0.3
+
+info:
+  title: JSONPlaceholder
+  description: Free fake API for testing and prototyping.
+  version: 0.1.0
+
+paths:
+  "/posts":
+    get:
+      tags: ["posts"]
+      summary: Returns all posts
+      responses:
+        "200":
+          description: All went well
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/post"
+components:
+  schemas:
+    post:
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID of the post
+        title:
+          type: string
+          description: Title of the post
+        body:
+          type: string
+          description: Body of the post

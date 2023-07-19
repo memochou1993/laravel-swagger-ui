@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "build:docs": "redocly bundle docs/openapi.yaml --output public/docs/spec.json --ext json"
     },
     "devDependencies": {
         "axios": "^1.1.2",
